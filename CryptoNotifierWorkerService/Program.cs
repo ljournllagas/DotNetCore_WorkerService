@@ -7,7 +7,7 @@ using Microsoft.Extensions.Hosting;
 
 namespace CryptoNotifierWorkerService
 {
-    public class Program
+    public static class Program
     {
         public static void Main(string[] args)
         {
@@ -16,9 +16,8 @@ namespace CryptoNotifierWorkerService
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                .ConfigureServices((hostContext, services) =>
+                .ConfigureServices((_, services) =>
                 {
-                    services.AddHostedService<Worker>();
                     services.AddHostedService<CryptoNotifierService>();
                 }).UseWindowsService();
     }
