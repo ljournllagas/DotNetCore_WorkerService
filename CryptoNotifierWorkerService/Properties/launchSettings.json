@@ -1,0 +1,10 @@
+﻿{
+  "profiles": {
+    "CryptoNotifierWorkerService": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
