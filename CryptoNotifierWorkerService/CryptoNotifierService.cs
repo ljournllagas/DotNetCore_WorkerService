@@ -178,7 +178,7 @@ namespace CryptoNotifierWorkerService
                     _ = SendEmail(GetPesoValueOfEnrolledCrypto());
                 }
 
-                await Task.Delay(100, stoppingToken);
+                await Task.Delay(1000, stoppingToken);
             }
         }
 
